@@ -26,7 +26,7 @@ Explanation: Insert 3 at position 3, elements [4,5,6] shift right*/
 #include<stdio.h>
 int main()
 {
-    int pos,a,i,key,n,element;
+    int pos,i,n,element;
     printf("Enter The number of elements you want to enter in array: ");
     scanf("%d",&n);
     int arr[100];
@@ -51,4 +51,5 @@ int main()
     {
         printf("%d ",arr[i]);
     }
+
 }
