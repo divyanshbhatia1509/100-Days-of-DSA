@@ -25,35 +25,31 @@ Explanation: Delete position 2 (element 20), remaining elements shift left*/
 
 int main() {
     int n, pos;
-    
-    // Read number of elements
+    printf("Enter the number of elements you want to enter in an array: ");
     scanf("%d", &n);
     
     int arr[n];
-    
-    // Read array elements
+    printf("Enter the elements in an array: ");
     for (int i = 0; i < n; i++) {
         scanf("%d", &arr[i]);
     }
     
-    // Read position to delete (1-based)
+    printf("Enter the position from which you want to delete element: ");
     scanf("%d", &pos);
     
-    // Check for valid position
     if (pos < 1 || pos > n) {
         printf("Invalid position");
         return 0;
     }
-    
-    // Shift elements to the left
+    else
+    {
     for (int i = pos - 1; i < n - 1; i++) {
         arr[i] = arr[i + 1];
     }
-    
-    // Print updated array
     for (int i = 0; i < n - 1; i++) {
         printf("%d ", arr[i]);
     }
     
     return 0;
+}
 }
