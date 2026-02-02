@@ -37,19 +37,24 @@ int main()
     }
     printf("Enter the position in which you want to insert: ");
     scanf("%d",&pos);
+    
+    if (pos < 1 || pos > n) {
+        printf("Invalid position");
+        return 0;
+    }
+    else
+    {
     printf("Enter the element you want to insert: ");
     scanf("%d",&element);
     
     for(i=n+1;i>=pos-1;i--)
     {
-
-       arr[i]=arr[i-1] ;
-
+     arr[i]=arr[i-1] ;
     }
     arr[pos-1]=element;
     for(i=0;i<n+1;i++)
     {
         printf("%d ",arr[i]);
     }
-
+}
 }
